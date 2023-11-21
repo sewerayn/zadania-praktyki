@@ -1,0 +1,18 @@
+/* Funkcje kryptograficzne możliwe do użycia przy szyfrowaniu hasła w bazie danych */
+
+Sól (Salt):
+- Opis: Sól to unikalny losowy ciąg danych, który jest dodawany do hasła przed zastosowaniem funkcji skrótu. 
+Dodanie soli zapobiega atakom słownikowym i atakom przy użyciu tęczowych tablic, ponieważ nawet identyczne hasła będą miały różne skróty w zależności od zastosowanej soli.
+- Przykłady: Losowe ciągi bajtów generowane przez silnik RNG (Generator Liczb Losowych).
+
+Funkcje Deriwacji Klucza (Key Derivation Functions - KDF):
+- Opis: KDF są używane do generowania dłuższych i bardziej złożonych kluczy na podstawie krótkiego hasła. Są używane w celu zwiększenia bezpieczeństwa przed atakami typu brute-force.
+- Przykłady: PBKDF2 (Password-Based Key Derivation Function 2), bcrypt, scrypt, Argon2.
+
+Algorytmy Szyfrowania:
+- Opis: W niektórych przypadkach, szczególnie gdy konieczne jest przechowywanie bardziej złożonych danych niż same hasła, stosuje się algorytmy szyfrowania. W przeciwieństwie do funkcji skrótu, algorytmy szyfrowania są dwukierunkowe, co oznacza, że można odzyskać oryginalne dane przy użyciu klucza.
+- Przykłady: AES (Advanced Encryption Standard), Twofish, Blowfish.
+
+Protokoły Autentykacji:
+- Opis: Protokoły autentykacji są stosowane w celu uwierzytelniania użytkownika przed dostępem do systemu. Mogą obejmować również funkcje kryptograficzne do bezpiecznej wymiany informacji uwierzytelniającej.
+- Przykłady: OAuth, OpenID Connect, JWT (JSON Web Tokens).
